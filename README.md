@@ -17,7 +17,7 @@ sudo apt-get install -y     ros-humble-kobuki-velocity-smoother     ros-humble-s
 ### 2. Build the Package
 Navigate to your workspace root and build the packages:
 ```bash
-cd ~/turtlebot_docker_ws
+cd ~/skuba_ws
 # Install any missing dependencies via rosdep
 rosdep install -i --from-path src --rosdistro humble -y
 
@@ -28,7 +28,7 @@ colcon build --symlink-install --executor sequential
 ### 3. Source the Workspace
 After every build, source the setup file:
 ```bash
-source ~/turtlebot_docker_ws/install/setup.bash
+source ~/skuba_ws/install/setup.bash
 ```
 
 ## Usage
