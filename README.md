@@ -6,7 +6,7 @@ It has been detached from the original Git history to allow for custom URDF modi
 ## Installation & Setup
 
 ### 1. Prerequisites
-Ensure you have ROS 2 Humble installed on your Ubuntu 24.04 (or 22.04) system.
+Ensure you have ROS 2 Humble installed on your system.
 
 Install necessary system dependencies:
 ```bash
