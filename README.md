@@ -10,6 +10,8 @@ Ensure you have ROS 2 Humble installed on your system.
 
 Install necessary system dependencies:
 ```bash
+cd ~/skuba_ws/src/
+git clone https://github.com/NapatzZ/skuba-kobuki-driver.git
 sudo apt-get update
 sudo apt-get install -y     ros-humble-kobuki-velocity-smoother     ros-humble-sophus     ros-humble-teleop-twist-keyboard     ros-humble-joy-teleop     ros-humble-teleop-twist-joy
 ```
@@ -42,7 +44,7 @@ ros2 launch kobuki_node kobuki_node-launch.py
 ### Teleoperation (Keyboard)
 In a new terminal (don’t forget to source), run:
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=commands/velocity
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
 ### Customizing URDF
