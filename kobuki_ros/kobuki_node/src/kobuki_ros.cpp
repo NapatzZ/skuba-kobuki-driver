@@ -203,6 +203,10 @@ KobukiRos::KobukiRos(const rclcpp::NodeOptions & options) : rclcpp::Node("kobuki
 
   parameters.log_level = kobuki::LogLevel::NONE; // disable since we are rewiring to ros slots
   parameters.enable_acceleration_limiter = this->declare_parameter("acceleration_limiter", false);
+  parameters.linear_acceleration_limit = this->declare_parameter("linear_acceleration_limit", 0.3);
+  parameters.linear_deceleration_limit = this->declare_parameter("linear_deceleration_limit", -0.3*1.2);
+  parameters.angular_acceleration_limit = this->declare_parameter("angular_acceleration_limit", 3.5);
+  parameters.angular_deceleration_limit = this->declare_parameter("angular_deceleration_limit", -3.5*1.2);
   parameters.battery_capacity = this->declare_parameter("battery_capacity", kobuki::Battery::capacity);
   parameters.battery_low = this->declare_parameter("battery_low", kobuki::Battery::low);
   parameters.battery_dangerous = this->declare_parameter("battery_dangerous", kobuki::Battery::dangerous);

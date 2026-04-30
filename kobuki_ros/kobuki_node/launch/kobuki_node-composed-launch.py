@@ -27,7 +27,8 @@ def generate_launch_description():
                     package='kobuki_node',
                     plugin='kobuki_node::KobukiRos',
                     name='kobuki_ros_node',
-                    parameters=[params]),
+                    parameters=[params],
+                    remappings=[('commands/velocity', '/cmd_vel')]),
             ],
             output='both',
     )
